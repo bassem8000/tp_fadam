@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/inscription.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"> Page Accueil</a>
+    </header>
+    <nav>
+        <a href="epreuves.html">Epreuves</a>
+        <a href="index.html">Accueil</a>
+        <a href="inscription.html" aria-current = "page"> Inscription</a>
+    </nav>
+    <main>
+        <h1>Inscription</h1>
+        <form id="form-inscription">
+            <fieldset>
+                <legend>Idendité</legend>
+                <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="date-naissance">Date de naissance :</label>
+                <input type="date" id="date-naissance" name="date_naissance" required>
+            </div>
+
+            </fieldset>
+            <fieldset>
+                <legend>Participation</legend>
+                    <div>
+                    <label for="choix-epreuve">Épreuve :</label>
+                    <select id="choix-epreuve" name="epreuve" required>
+                        <option value="">Choisir une épreuve</option>
+                    </select>
+                </div>
+
+                <div>
+                    <span>Rôle :</span>
+                    <input type="radio" id="role-participant" name="role" value="participant" required>
+                    <label for="role-participant">Participant</label>
+
+                    <input type="radio" id="role-benevole" name="role" value="benevole">
+                    <label for="role-benevole">Bénévole</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="reglement" name="reglement" required>
+                    <label for="reglement">J'accepte le règlement</label>
+                </div>
+            </fieldset>
+        </form>
+
+        <div id="recapitulatif"></div>
+    </main>
+    <footer>
+        © <span id="annee"></span> FADAM Games Paris 2027
+    </footer>
+
+
+</body>
+</html>
